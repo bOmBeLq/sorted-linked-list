@@ -1,0 +1,16 @@
+{
+    "name": "shipmonk/sorted-linked-list",
+    "description": "Sorted linked list implementation for recruitment process",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Shipmonk\\SortedLinkedList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damian Wroblewski"
+        }
+    ],
+    "require": {}
+}
