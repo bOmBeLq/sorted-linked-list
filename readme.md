@@ -29,6 +29,8 @@ Comparator defines list type (integer or string implemented).
      foreach($list as $listItem) {...}
      or transformed into regular array
      $array = itertator_to_array($list); // notice we are losing LinkedList prefits this way
+     List nodes (ListItem.php) is hidden from public api. 
+     Depending on implementation we may want to expose it but I like to keep things easy to use.
 ```
 ### Extending list with new types
 To be able to create list for custom types (eg. DatabaseUser) create comparator for given type.
