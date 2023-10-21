@@ -10,8 +10,7 @@ class LinkedListValueIterator implements \Iterator
 {
     public function __construct(
         private LinkedListIterator $baseIterator
-    )
-    {
+    ) {
     }
 
     public function current(): mixed

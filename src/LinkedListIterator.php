@@ -4,7 +4,6 @@ namespace Shipmonk\SortedLinkedList;
 
 class LinkedListIterator implements \Iterator
 {
-
     protected ?ListItem $currentItem;
     protected int $key = 0;
 

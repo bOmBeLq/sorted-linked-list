@@ -2,7 +2,6 @@
 
 namespace Tests\Shipmonk\SortedLinkedList;
 
-
 use Shipmonk\SortedLinkedList\Comparator\CaseInsensitiveStringComparator;
 use Shipmonk\SortedLinkedList\Comparator\CaseSensitiveStringComparator;
 use Shipmonk\SortedLinkedList\Comparator\IntegerComparator;
@@ -10,7 +9,6 @@ use Shipmonk\SortedLinkedList\SortedLinkedList;
 
 class SortedLinkedListTest extends \PHPUnit\Framework\TestCase
 {
-
     /**
      * @dataProvider addProvider
      * @param int[] $integersToAdd
