@@ -194,20 +194,20 @@ class SortedLinkedListTest extends \PHPUnit\Framework\TestCase
         $this->assertFalse($list->indexOf(6));
     }
 
-    public function stringListTest(): void
+    public function testStringList(): void
     {
         // Arrange
         $list = new SortedLinkedList(new CaseInsensitiveStringComparator());
         $expectedValues = [];
 
         // Act
-        $list->add($expectedValues[] = 'some text 1');
-        $list->add($expectedValues[] = 'some text 3');
-        $list->add($expectedValues[] = 'some Text 2');
-        $list->add('some Text 5');
-        $list->remove('some Text 2');
+        $list->add($value1 = 'some text 1');
+        $list->add($value3 = 'some text 3');
+        $list->add($value2 = 'some Text 2');
+        $list->add($value5 = 'some Text 5');
+        $list->remove($value2);
 
         // Assert
-        $this->assertEquals($expectedValues, iterator_to_array($list));
+        $this->assertEquals([$value1, $value3, $value5], iterator_to_array($list));
     }
 }
