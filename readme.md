@@ -8,6 +8,38 @@ able to hold string or int values, but not both. Try to
 think about what you'd expect from such library as a
 user in terms of usability and best practices, and apply those.”
 
+
+## Library usage
+There is one general SortedLinkedList which receives `comparator` as argument.  
+Comparator defines list type (integer or string implemented).
+```
+     $list = new SortedLinkedList(new CaseInsensitiveStringComparator());
+     or
+     $list = new SortedLinkedList(new CaseSensitiveStringComparator());
+     or
+     $list = new SortedLinkedList(new IntegerComparator());
+     
+     $list->add($value1);
+     $list->add($value2);
+     $list->add($value3);
+     
+     $list->remove($value1);
+     
+     List implements \Iterator so can be either iterated like regular array
+     foreach($list as $listItem) {...}
+     or transformed into regular array
+     $array = itertator_to_array($list); // notice we are losing LinkedList prefits this way
+```
+### Extending list with new types
+To be able to create list for custom types (eg. DatabaseUser) create comparator for given type.
+```
+    class DatabaseUserComparator implements Shipmonk\SortedLinkedList\Comparator\ComparatorInterface {
+      [...]
+    }
+    $list = new SortedLinkedList(new DatabaseUserComparator());
+    [...]
+```
+
 ## Development env 
 ### Requirements:
 docker installed
