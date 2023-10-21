@@ -4,7 +4,8 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Shipmonk\\SortedLinkedList\\": "src/"
+            "Shipmonk\\SortedLinkedList\\": "src/",
+            "Tests\\Shipmonk\\SortedLinkedList\\": "tests/"
         }
     },
     "authors": [
@@ -12,5 +13,7 @@
             "name": "Damian Wroblewski"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
 }
